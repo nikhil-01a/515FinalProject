@@ -1,5 +1,6 @@
 import json
 import sys
+import argparse
 
 
 def gron(json_data, parent='json', is_root=True):
@@ -29,16 +30,23 @@ def gron(json_data, parent='json', is_root=True):
 
 
 def main():
-    # If a filename is provided as an argument, read from the file
-    if len(sys.argv) > 1:
-        with open(sys.argv[1], 'r') as file:
-            json_data = json.load(file)
-    else:
-        # Otherwise, read from STDIN
-        json_data = json.load(sys.stdin)
+    parser = argparse.ArgumentParser(
+        description='Flatten JSON object into individual assignments.')
+    parser.add_argument('filename', nargs='?', type=argparse.FileType(
+        'r'), default=sys.stdin, help='JSON file to read (stdin if not provided)')
+    args = parser.parse_args()
+
+    try:
+        json_data = json.load(args.filename)
+    except json.JSONDecodeError:
+        print("Error: Invalid JSON format!")
+        sys.exit(1)
 
     gron_output = gron(json_data)
     print('\n'.join(gron_output))
+
+    args.filename.close()
+    sys.exit(0)
 
 
 if __name__ == "__main__":

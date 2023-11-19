@@ -1,6 +1,7 @@
 import sys
 import re
 import json
+import argparse
 
 
 def parse_line(line):
@@ -42,16 +43,23 @@ def construct_json(lines):
     return root.get('json', root)
 
 
-if __name__ == "__main__":
-    if (len(sys.argv)) > 1:
-        file_name = sys.argv[1]
-        print(file_name)
-    else:
-        file_name = sys.stdin.readline()
-        print(file_name)
+def main():
+    parser = argparse.ArgumentParser(
+        description='Convert gron output back into JSON.')
+    parser.add_argument('filename', nargs='?', type=argparse.FileType(
+        'r'), default=sys.stdin, help='File to read from (stdin if not provided)')
+    args = parser.parse_args()
+
     try:
-        with open(file_name, 'r') as file:
-            lines = file.readlines()
-            print(json.dumps(construct_json(lines), indent=2))
-    except:
-        print(f"Error! {file_name} not found!")
+        lines = args.filename.readlines()
+        print(json.dumps(construct_json(lines), indent=2))
+    except FileNotFoundError:
+        print(f"Error! {args.filename.name} not found!")
+        sys.exit(1)
+
+    args.filename.close()
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
