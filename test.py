@@ -8,13 +8,25 @@ def run_test(prog, test_name, use_arg=False):
     input_file = f"test/{prog}.{test_name}.in"
     expected_output_file = f"test/{prog}.{test_name}{'.arg.out' if use_arg else '.out'}"
 
+    # Determine the flags and their values based on the test name
+    flags = []
+    if 'l' in test_name:
+        flags.append('-l')
+    if 'w' in test_name:
+        flags.append('-w')
+    if 'c' in test_name:
+        flags.append('-c')
+
+    # Handle the --obj flag for gron
+    if prog == 'gron' and 'obj' in test_name:
+        obj_name = test_name.split('_')[1]  # Assuming format like 'obj_custom'
+        flags += ['--obj', obj_name]
+
     with open(input_file, 'r') as infile:
-        if use_arg:
-            result = subprocess.run(
-                ['python', f'prog/{prog}.py', input_file], stdout=subprocess.PIPE, text=True)
-        else:
-            result = subprocess.run(
-                ['python', f'prog/{prog}.py'], stdin=infile, stdout=subprocess.PIPE, text=True)
+        command = ['python', f'prog/{prog}.py'] + \
+            flags + ([input_file] if use_arg else [])
+        result = subprocess.run(
+            command, stdin=None if use_arg else infile, stdout=subprocess.PIPE, text=True)
 
     if result.returncode != 0:
         return "TestResult.NonZeroExit"

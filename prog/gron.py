@@ -3,7 +3,7 @@ import sys
 import argparse
 
 
-def gron(json_data, parent='json', is_root=True):
+def gron(json_data, parent, is_root=True):
     output = []
     if is_root:
         output.append(f'{parent} = {{}};')  # Start with an empty object
@@ -19,11 +19,9 @@ def gron(json_data, parent='json', is_root=True):
                 output.append(f'{path} = [];')  # Declare a list
                 for i, item in enumerate(value):
                     item_path = f"{path}[{i}]"
-                    # Declare each item in the list
                     output.append(f'{item_path} = {{}};')
                     output.extend(gron(item, item_path, False))
             else:
-                # Assign simple values
                 output.append(f'{path} = {json.dumps(value)};')
 
     return output
@@ -32,6 +30,8 @@ def gron(json_data, parent='json', is_root=True):
 def main():
     parser = argparse.ArgumentParser(
         description='Flatten JSON object into individual assignments.')
+    parser.add_argument('--obj', default='json',
+                        help='Base object name (default: json)')
     parser.add_argument('filename', nargs='?', type=argparse.FileType(
         'r'), default=sys.stdin, help='JSON file to read (stdin if not provided)')
     args = parser.parse_args()
@@ -42,7 +42,7 @@ def main():
         print("Error: Invalid JSON format!")
         sys.exit(1)
 
-    gron_output = gron(json_data)
+    gron_output = gron(json_data, args.obj)
     print('\n'.join(gron_output))
 
     args.filename.close()
