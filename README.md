@@ -22,7 +22,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
    - Here's a guide to store the test cases with proper naming convention so that our test harness **test.py** picks the files up without any error. 
    - This directory has the ***'.in'*** and ***'.out'*** files that are used by the **RunTest()**.
    - Below we see naming conventions of normal test files, which are the **general** tests and then the naming conventions of the file for the **extensions** test. By storing the files with the below naming conventions you can run the tests for any program using the test harness.
-   - 1. Normal Tests: The naming convention format of the test files is as follows:
+   - 1. Normal Tests: The naming convention format of the test files is as follows. This is how my test cases are stored for a given program and its test:
         - **progName.testName.in** = input file
         - **progName.testName.arg.out** = arg expected ouput file
         - **progName.testName.out** = expect output file for 'STDIN' case.
@@ -41,7 +41,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **gron.testNameObj_objName.arg.out** = arg expected ouput file
         - **gron.testNameObj_objName.out** = expect output file for 'STDIN' case.
        
-3. **CI** : A CI pipeline is setup in the github repo to automatically run my test harness test.py everytime something is pushed into the repository's main branch.
+3. **CI** : A CI pipeline is setup in the github repo to automatically run my test harness **test.py** everytime something is pushed into the repository's main branch.
  
 ## Any bugs or issues you could not resolve
 
