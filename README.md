@@ -36,10 +36,10 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **wc.testNamel.arg.out** = arg expected ouput file
         - **wc.testNamel.out** = expect output file for 'STDIN' case.
         - And so on.. for **'c'** and **'w'**. And a combination is also allowed similarly: like **'lw'**.
-   - 4. Extension 3: gron 'custom base object' test files. Here **'objName'** will be our base object name.
-        - **gron.testName.obj_objName.in** = input file
-        - **gron.testName.obj_objName.arg.out** = arg expected ouput file
-        - **gron.testName.obj_objName.out** = expect output file for 'STDIN' case.
+   - 4. Extension 3: gron 'custom base object' test files. Here **'objName'** will be our custom base object name.
+        - **gron.testNameObj_objName.in** = input file
+        - **gron.testNameObj_objName.arg.out** = arg expected ouput file
+        - **gron.testNameObj_objName.out** = expect output file for 'STDIN' case.
 
 ## Any bugs or issues you could not resolve
 
