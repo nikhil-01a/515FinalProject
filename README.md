@@ -52,7 +52,7 @@ While working on gron, although the solution was easy but it was a bit tricky in
 ## A list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them.
 The three extensions I chose are:
 1. **wc** - multiple files:
-2. - desc:
+   - desc:
    - testing manually:
    - testing using test harness:
 3. **wc** - flags to control output:
