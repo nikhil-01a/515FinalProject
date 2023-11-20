@@ -31,11 +31,11 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **wc.testName.part2.in** = input file 2
         - **wc.testName.arg.out** = arg expected ouput file
         - **wc.testName.out** = expect output file for 'STDIN' case.
-   - 3. Extension 2: wc 'flag input' test files. Here **'l'**, **'c'** and **'w'** in the file names are important to recognize the flag operations.
-        - **wc.testName.l.in** = input file
-        - **wc.testName.l.arg.out** = arg expected ouput file
-        - **wc.testName.l.out** = expect output file for 'STDIN' case.
-        - And so on.. for **'c'** and **'w'**
+   - 3. Extension 2: wc 'flag input' test files. Here **'l'**, **'c'** and **'w'** in the file names are important to recognize the flag operations. Also, the flags can be combined as well: **'lw'**. 
+        - **wc.testNamel.in** = input file
+        - **wc.testNamel.arg.out** = arg expected ouput file
+        - **wc.testNamel.out** = expect output file for 'STDIN' case.
+        - And so on.. for **'c'** and **'w'**. And a combination is also allowed similarly: **'lw'** 
    - 4. Extension 3: gron 'custom base object' test files. Here **'objName'** will be our base object name.
         - **gron.testName.obj_objName.in** = input file
         - **gron.testName.obj_objName.arg.out** = arg expected ouput file
