@@ -26,7 +26,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **progName.testName.in** = input file
         - **progName.testName.arg.out** = arg expected ouput file
         - **progName.testName.out** = expect output file for 'STDIN' case.
-   - 2. Extension 1: wc 'multiple input' test files
+   - 2. Extension 1: wc 'multiple input' test files. Testing manually as of now but have this concept.
         - **wc.testName.part1.in** = input file 1
         - **wc.testName.part2.in** = input file 2
         - **wc.testName.arg.out** = arg expected ouput file
@@ -45,7 +45,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
  
 ## Any bugs or issues you could not resolve
 
-For my wc program I'm still trying to **automate** its testing for **multiple files input** in the test harness that I've created. But the extension works and it can be manually tested on the terminal for the wc program.  
+There are no bugs in my wc program, but couldn't **automate** the testing for **multiple files input** in the test harness for extension1 wc program. The extension is added and works though, it can be manually tested on the terminal for the wc program.  
 
 ## An example of a difficult issue or bug and how you resolved it
 
