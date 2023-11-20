@@ -45,7 +45,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
  
 ## Any bugs or issues you could not resolve
 
-There are no bugs in my wc program, but couldn't **automate** the testing for **multiple files input** in the test harness for extension1 wc program. The extension is added and works though, it can be manually tested on the terminal for the wc program.  
+There are no bugs in my wc program, but couldn't **automate** the testing for 'wc' program Extension **multiple files input** in the test harness. Althoug, the extension is added and it works, it can be manually tested on the terminal.
 
 ## An example of a difficult issue or bug and how you resolved it
 
