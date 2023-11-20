@@ -16,7 +16,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
      4. 'TestResult.MissingOutPutFile' : If the 'expected output' file wasn't found.
    - I then collect the 'run_test()'s return result for every test and update the results dictionary.
    - Lastly I'm checking if the number of 'OK's are equal to the number of tests ran. If that's the case then it means all the tests ran are passed. Otherwise the system will exit with sys.exit(1).
-   - **Runtest()** : In the runtest(), based on the program name and test name, I'm finding the input file and using subprocess running the file and storing the result. Then, I'm reading the coressponding expected **.out** file and comparing it                          with the result to see if they match. If they match then the test ran successfully.
+   - **Runtest()** : In the runtest(), based on the program name and test name, I'm finding the input file and by using 'subprocess' I'm running the input file and storing its result. Then, I'm reading the corresponding 'expected **.out** file' for it and comparing it with the 'result' stored to see if they match. If they match then the test ran successfully.
      
 2. Test Cases: in **test** directory:
 
