@@ -7,9 +7,9 @@
 I usually use the pomodoro technique to estimate the amount of time I spend working on something. My each pomodoro is 20 minutes. I would say collectively and approximately I have completed 30 pomodoros of 20 minutes on this assignment. Which is equivalent of 10 hours approx collectively.
 
 ## A description of how you tested your code
-1. Created a test harness:
-   - In the main function: using glob to find the '.in' files in 'test' directory and passed them through the custom 'run_test()' for **STDIN** first and then for **ARGS**.
-   - I have created a custome results dictionary to store the overall results. The **results** dictonary keeps a count of 4 things and increments the values inside it accordingly for every test:
+1. Created a test harness **test.py**:
+   - In the main function: I'm using glob to find the '.in' files in 'test' directory and passed them through the custom 'run_test()' for **STDIN** first and then for **ARGS**.
+   - I have created a custom results dictionary to store the overall results. The **results** dictonary keeps a count of 4 things and increments the values inside it accordingly for every test:
    - 1. 'OK' : If the test ran successfuly.
      2. 'TestResult.NonZeroExit' : If the test failed and exited with a sys code other than '0'.
      3. 'TestResult.OutputMismatch' : If there were no functional errors but the output got is not same as the output expected.
@@ -17,7 +17,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
    - I then collect the 'run_test()'s return result for every test and update the results dictionary.
    - Lastly I'm checking if the number of 'OK's are equal to the number of tests ran. If that's the case then it means all the tests ran are passed. Otherwise the system will exit with sys.exit(1).
   
-2. Test Cases:
+2. Test Cases **test** directory:
 
 ## Any bugs or issues you could not resolve
 
