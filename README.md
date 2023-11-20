@@ -54,17 +54,29 @@ While working on gron, although the solution was easy but it was a bit tricky in
 ## A list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them.
 The three extensions I chose are:
 1. **wc** - multiple files:
-   - Description: Modified my simple wc.py function and used argparse module to accept multiple filenames and process them to match the corresponding functionality with the official 'wc'.
-   - Manual testing:
-      - we can manually test it by providing arguments in terminal: **python wc.py foo foo1** and it will take both the files 'foo' and 'foo1', and process them.
+   - **Description**:
+      - Modified my simple wc.py function and used argparse module to accept multiple filenames and process them to match the corresponding functionality with the official 'wc'.
+   - **Manual testing**:
+      - We can manually test it by providing arguments in terminal: **python wc.py foo foo1** and it will take both the files 'foo' and 'foo1', and process them.
+      - For STDIN testing you can run: **cat foo foo1 | python wc.py** to test.
       - These files (foo and foo1) are stored in the **/prog** directory along with wc.py file for testing purposes.
-   - Test using Test Harness: An elaborate description is given in the 'Test Cases Guide' above to create the test case files for this extension. When you run **python test.py** in the root directory. All the tests in the test directory defined using the proper naming convention above are executed.
+   - **Test using Test Harness**:
+      - An elaborate description is given in the 'Test Cases Guide' above to create the test case files for this extension. When you run **python test.py** in the root directory. All the tests in the 'test' directory defined using the proper.  naming convention above are executed. All my testcases are in the **/test** directory.
 3. **wc** - flags to control output:
-   - desc:
-   - testing manually:
-   - testing using test harness:
+   - **Description**:
+      - Modified my simple wc.py function and used argparse module to accept flag control options and process them to match the corresponding functionality with the official 'wc'.
+   - **Manual testing**:
+      - We can manually test it by providing arguments in terminal like: **python wc.py -l foo** and it will give us only the count of the lines in 'foo'. similarly this can be repeated for **'c'** and **'w'**. Also for a combination.
+      - For STDIN testing you can run: **cat foo | python wc.py -l** to test.
+      - There are two files again (foo and foo1) stored in the **/prog** directory along with wc.py file for testing purposes. You can make use of these for manual testing.
+   - **Test using Test Harness**:
+      - An elaborate description is given in the 'Test Cases Guide' above to create the test case files for this extension. When you run **python test.py** in the root directory. All the tests in the 'test' directory defined using the proper naming convention above are executed. All my testcases are in the **/test** directory.
 4. **gron** - control the base-object name:
-   - desc:
-   - testing manually:
-   - testing using test harness:
+   - **Description**:
+      - Modified my simple gron.py function and used argparse module to accept the custom base object name along with the filename and process them to match the corresponding functionality with the official 'wc'.
+   - **Manual testing**:
+      - we can manually test it by providing arguments in terminal: **python gron.py --obj custom eg.json** and here 'custom' is the base object name that we want to give.
+      - There is a json file (eg.json) stored in the **/prog** directory along with gron.py file if you want to test it manually.
+   - **Test using Test Harness**:
+      - An elaborate description is given in the 'Test Cases Guide' above to create the test case files for this extension. When you run **python test.py** in the root directory. All the tests in the test directory defined using the proper naming convention above are executed. All my testcases are in the **/test** directory.
    
