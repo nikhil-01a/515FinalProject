@@ -27,19 +27,19 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **progName.testName.arg.out** = arg expected ouput file
         - **progName.testName.out** = expect output file for 'STDIN' case.
    - 2. Extension 1: wc 'multiple input' test files
-        - **progName.testName.part1.in** = input file 1
-        - **progName.testName.part2.in** = input file 2
-        - **progName.testName.arg.out** = arg expected ouput file
-        - **progName.testName.out** = expect output file for 'STDIN' case.
+        - **wc.testName.part1.in** = input file 1
+        - **wc.testName.part2.in** = input file 2
+        - **wc.testName.arg.out** = arg expected ouput file
+        - **wc.testName.out** = expect output file for 'STDIN' case.
    - 3. Extension 2: wc 'flag input' test files
-        - **progName.testName.l.in** = input file
-        - **progName.testName.l.arg.out** = arg expected ouput file
-        - **progName.testName.l.out** = expect output file for 'STDIN' case.
+        - **wc.testName.l.in** = input file
+        - **wc.testName.l.arg.out** = arg expected ouput file
+        - **wc.testName.l.out** = expect output file for 'STDIN' case.
         - And so on.. for **'c'** and **'w'**
    - 4. Extension 3: gron 'custom base object' test files
         - **gron.testName.obj_objName.in** = input file
-        - **progName.testName.obj_objName.arg.out** = arg expected ouput file
-        - **progName.testName.obj_objName.out** = expect output file for 'STDIN' case.
+        - **gron.testName.obj_objName.arg.out** = arg expected ouput file
+        - **gron.testName.obj_objName.out** = expect output file for 'STDIN' case.
 
 ## Any bugs or issues you could not resolve
 
