@@ -1,7 +1,7 @@
 ## Nikhil Kumar G - nkumarg@stevens.edu
 
 ## GitHub Url:
-(https://github.com/nikhil-01a/Python-TestHarness)
+https://github.com/nikhil-01a/Python-TestHarness
 
 ## Estimate of how many hours you spent on the project
 I usually use the pomodoro technique to estimate the amount of time I spend working on something. My each pomodoro is 20 minutes. I would say collectively and approximately I have completed 30 pomodoros of 20 minutes on this assignment. Which is equivalent of 10 hours approx collectively.
