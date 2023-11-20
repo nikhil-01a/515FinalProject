@@ -45,7 +45,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
  
 ## Any bugs or issues you could not resolve
 
-For my wc program I'm still trying to automate its testing for **multiple files input** in the test harness that I've created.  
+For my wc program I'm still trying to **automate** its testing for **multiple files input** in the test harness that I've created. But the extension works and it can be manually tested on the terminal for the wc program.  
 
 ## An example of a difficult issue or bug and how you resolved it
 
