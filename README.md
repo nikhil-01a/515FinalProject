@@ -20,6 +20,6 @@ While working on gron, although the solution was easy but it was a bit tricky in
 
 ## A list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them.
 The three extensions I chose are:
-wc - multiple files
-wc - flags
-gron - base --obj
+1. wc - multiple files
+2. wc - flags
+3. gron - base --obj
