@@ -47,7 +47,7 @@ For my wc program I'm still trying to automate its testing for **multiple files 
 
 ## An example of a difficult issue or bug and how you resolved it
 
-While working on gron, although the solution was easy but it was a bit tricky in the begininng to figure out why the output wasn't exactly same as the official gron output. Later I decided to order the output alphabetically. So I just sorted the keys while flattenning the json and that was resolved.
+While working on gron, although the solution was easy but it was a bit tricky in the begininng to figure out why the output wasn't exactly same as the official gron output. Later I decided to order the output alphabetically. So I just sorted the keys while flattenning the json and the issue was resolved.
 
 ## A list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them.
 The three extensions I chose are:
