@@ -18,7 +18,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
    - Lastly I'm checking if the number of 'OK's are equal to the number of tests ran. If that's the case then it means all the tests ran are passed. Otherwise the system will exit with sys.exit(1).
    - **Runtest()** : In the runtest(), based on the program name and test name, I'm finding the input file and by using 'subprocess' I'm running the input file and storing its result. Then, I'm reading the corresponding 'expected **.out** file' for it and comparing it with the 'result' stored to see if they match. If they match then the test ran successfully.
      
-2. Test Cases: in **test** directory:
+2. Test Cases Guide: in **test** directory:
    - Here's a guide to store the test cases with proper naming convention so that our test harness **test.py** picks the files up without any error. 
    - This directory has the ***'.in'*** and ***'.out'*** files that are used by the **RunTest()**.
    - Below we see naming conventions of normal test files, which are the **general** tests and then the naming conventions of the file for the **extensions** test. By storing the files with the below naming conventions you can run the tests for any program using the test harness.
