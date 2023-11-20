@@ -19,14 +19,27 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
    - **Runtest()** : In the runtest(), based on the program name and test name, I'm finding the input file and by using 'subprocess' I'm running the input file and storing its result. Then, I'm reading the corresponding 'expected **.out** file' for it and comparing it with the 'result' stored to see if they match. If they match then the test ran successfully.
      
 2. Test Cases: in **test** directory:
+   - Here's a guide to store the test cases with proper naming convention so that our test harness **test.py** picks the files up without any error. 
    - This directory has the ***'.in'*** and ***'.out'*** files that are used by the **RunTest()**.
+   - Below we see naming conventions of normal test files, which are the **general** tests and then the naming conventions of the file for the **extensions** test. By storing the files with the below naming conventions you can run the tests for any program using the test harness.
    - 1. Normal Tests: The naming convention format of the test files is as follows:
         - **progName.testName.in** = input file
         - **progName.testName.arg.out** = arg expected ouput file
         - **progName.testName.out** = expect output file for 'STDIN' case.
    - 2. Extension 1: wc 'multiple input' test files
+        - **progName.testName.part1.in** = input file 1
+        - **progName.testName.part2.in** = input file 2
+        - **progName.testName.arg.out** = arg expected ouput file
+        - **progName.testName.out** = expect output file for 'STDIN' case.
    - 3. Extension 2: wc 'flag input' test files
+        - **progName.testName.l.in** = input file
+        - **progName.testName.l.arg.out** = arg expected ouput file
+        - **progName.testName.l.out** = expect output file for 'STDIN' case.
+        - And so on.. for **'c'** and **'w'**
    - 4. Extension 3: gron 'custom base object' test files
+        - **gron.testName.obj_objName.in** = input file
+        - **progName.testName.obj_objName.arg.out** = arg expected ouput file
+        - **progName.testName.obj_objName.out** = expect output file for 'STDIN' case.
 
 ## Any bugs or issues you could not resolve
 
