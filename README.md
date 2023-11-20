@@ -19,6 +19,11 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
    - **Runtest()** : In the runtest(), based on the program name and test name, I'm finding the input file and by using 'subprocess' I'm running the input file and storing its result. Then, I'm reading the corresponding 'expected **.out** file' for it and comparing it with the 'result' stored to see if they match. If they match then the test ran successfully.
      
 2. Test Cases: in **test** directory:
+   - This directory has the ***'.in'*** and ***'.out'*** files that are used by the **RunTest()**.
+   - The naming convention format of the test files is as follows:
+        - **progName.testName.in** = input file
+        - **progName.testName.arg.out** = arg expected ouput file
+        - **progName.testName.out** = expect output file for 'STDIN' case.
 
 ## Any bugs or issues you could not resolve
 
