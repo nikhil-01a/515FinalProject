@@ -15,7 +15,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
      3. 'TestResult.OutputMismatch' : If there were no functional errors but the output got is not same as the output expected.
      4. 'TestResult.MissingOutPutFile' : If the 'expected output' file wasn't found.
    - I then collect the 'run_test()'s return result for every test and update the results dictionary.
-   - Lastly I'm checking if the number of 'OK's are equal to the number of tests ran. If that's the case then it means all the tests ran are passed. Otherwise the system will exit with sys.exit(1).
+   - Lastly, I'm checking if the number of 'OK's are equal to the number of tests ran. If that's the case then it means all the tests ran are passed. Otherwise the system will exit with sys.exit(1).
    - **Runtest()** : In the runtest(), based on the program name and test name, I'm finding the input file and by using 'subprocess' I'm running the input file and storing its result. Then, I'm reading the corresponding 'expected **.out** file' for it and comparing it with the 'result' stored to see if they match. If they match then the test ran successfully.
      
 2. **Test Cases Guide**: in **test** directory:
@@ -40,7 +40,9 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **gron.testNameObj_objName.in** = input file
         - **gron.testNameObj_objName.arg.out** = arg expected ouput file
         - **gron.testNameObj_objName.out** = expect output file for 'STDIN' case.
-
+       
+3. **CI** : A CI pipeline is setup in the github repo to automatically run my test harness test.py everytime something is pushed into the repository's main branch.
+ 
 ## Any bugs or issues you could not resolve
 
 For my wc program I'm still trying to automate its testing for **multiple files input** in the test harness that I've created.  
@@ -52,9 +54,11 @@ While working on gron, although the solution was easy but it was a bit tricky in
 ## A list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them.
 The three extensions I chose are:
 1. **wc** - multiple files:
-   - desc:
-   - testing manually:
-   - testing using test harness:
+   - Description: Modified my simple wc.py function and used argparse module to accept multiple filenames and process them to match the corresponding functionality with the official 'wc'.
+   - Manual testing:
+      - we can manually test it by providing arguments in terminal: **python wc.py foo foo1** and it will take both the files 'foo' and 'foo1', and process them.
+      - These files (foo and foo1) are stored in the **/prog** directory along with wc.py file for testing purposes.
+   - Test using Test Harness: An elaborate description is given in the 'Test Cases Guide' above to create the test case files for this extension. When you run **python test.py** in the root directory. All the tests in the test directory defined using the proper naming convention above are executed.
 3. **wc** - flags to control output:
    - desc:
    - testing manually:
