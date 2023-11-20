@@ -45,7 +45,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
  
 ## Any bugs or issues you could not resolve
 
-There are no bugs in my wc program, but couldn't **automate** the testing for 'wc' program Extension **multiple files input** in the test harness. Althoug, the extension is added and it works, it can be manually tested on the terminal.
+There are no bugs in any of my programs.
 
 ## An example of a difficult issue or bug and how you resolved it
 
@@ -61,7 +61,7 @@ The three extensions I chose are:
       - For STDIN testing you can run: **cat foo foo1 | python wc.py** to test.
       - These files (foo and foo1) are stored in the **/prog** directory along with wc.py file for testing purposes.
    - **Test using Test Harness**:
-      - An elaborate description is given in the 'Test Cases Guide' above to create the test case files for this extension. When you run **python test.py** in the root directory. All the tests in the 'test' directory defined using the proper  naming convention above are executed. All my testcases are in the **/test** directory.
+      - Couldn't **automate** the testing for 'wc' program Extension **multiple files input** in the test harness. Although, the extension is added and it works, it can be manually tested on the terminal.
 3. ### **wc** - flags to control output:
    - **Description**:
       - Modified my simple wc.py function and used argparse module to accept flag control options and process them to match the corresponding functionality with the official 'wc'.
