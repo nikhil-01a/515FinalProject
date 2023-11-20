@@ -20,10 +20,13 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
      
 2. Test Cases: in **test** directory:
    - This directory has the ***'.in'*** and ***'.out'*** files that are used by the **RunTest()**.
-   - The naming convention format of the test files is as follows:
+   - 1. Normal Tests: The naming convention format of the test files is as follows:
         - **progName.testName.in** = input file
         - **progName.testName.arg.out** = arg expected ouput file
         - **progName.testName.out** = expect output file for 'STDIN' case.
+   - 2. Extension 1: wc 'multiple input' test files
+   - 3. Extension 2: wc 'flag input' test files
+   - 4. Extension 3: gron 'custom base object' test files
 
 ## Any bugs or issues you could not resolve
 
