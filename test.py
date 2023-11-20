@@ -18,9 +18,9 @@ def run_test(prog, test_name, use_arg=False):
         flags.append('-c')
 
     # Handle the --obj flag for gron
-    if prog == 'gron' and 'obj' in test_name:
+    if prog == 'gron' and 'Obj' in test_name:
         obj_name = test_name.split('_')[1]  # Assuming format like 'obj_custom'
-        flags += ['--obj', obj_name]
+        flags = flags + ['--obj', obj_name]
 
     with open(input_file, 'r') as infile:
         command = ['python', f'prog/{prog}.py'] + \
@@ -38,7 +38,7 @@ def run_test(prog, test_name, use_arg=False):
         return "TestResult.MissingOutputFile"
 
     if result.stdout != expected_output:
-        return f"TestResult.OutputMismatch\nexpected:\n{expected_output}\n\ngot:\n{result.stdout}"
+        return f"TestResult.OutputMismatch Expected: {expected_output} Got: {result.stdout}"
 
     return "OK"
 
@@ -49,21 +49,23 @@ def main():
                "TestResult.NonZeroExit": 0, "TestResult.MissingOutputFile": 0}
 
     for test_file in test_files:
+
         basename = os.path.basename(test_file)
         prog, test_name = basename.split('.')[0], basename.split('.')[1]
 
         # Run test in STDIN mode
+        # gets back : e.g., 'OK' or something.
         result = run_test(prog, test_name)
-        results[result] += 1
+        results[result] = results[result] + 1
         if result != "OK":
-            print(f"FAIL: {prog} {test_name} failed ({result})")
+            print(f"\nFAIL: {prog} {test_name} failed ({result})")
 
         # Run test in argument mode
         result_arg = run_test(prog, test_name, use_arg=True)
         results[result_arg] += 1
         if result_arg != "OK":
             print(
-                f"FAIL: {prog} {test_name} failed in argument mode ({result_arg})")
+                f"\nFAIL: {prog} {test_name} failed in argument mode ({result_arg})")
 
     # Print summary
     print("\nOK:", results["OK"])
