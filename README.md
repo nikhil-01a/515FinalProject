@@ -35,7 +35,7 @@ I usually use the pomodoro technique to estimate the amount of time I spend work
         - **wc.testNamel.in** = input file
         - **wc.testNamel.arg.out** = arg expected ouput file
         - **wc.testNamel.out** = expect output file for 'STDIN' case.
-        - And so on.. for **'c'** and **'w'**. And a combination is also allowed similarly: **'lw'** 
+        - And so on.. for **'c'** and **'w'**. And a combination is also allowed similarly: like **'lw'**.
    - 4. Extension 3: gron 'custom base object' test files. Here **'objName'** will be our base object name.
         - **gron.testName.obj_objName.in** = input file
         - **gron.testName.obj_objName.arg.out** = arg expected ouput file
@@ -51,6 +51,6 @@ While working on gron, although the solution was easy but it was a bit tricky in
 
 ## A list of the three extensions you’ve chosen to implement, with appropriate detail on them for the CAs to evaluate them.
 The three extensions I chose are:
-1. wc - multiple files:
-2. wc - flags to control output:
-3. gron - control the base-object name:
+1. **wc** - multiple files:
+2. **wc** - flags to control output:
+3. **gron** - control the base-object name:
