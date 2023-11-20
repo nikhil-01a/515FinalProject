@@ -7,7 +7,7 @@
 I usually use the pomodoro technique to estimate the amount of time I spend working on something. My each pomodoro is 20 minutes. I would say collectively and approximately I have completed 30 pomodoros of 20 minutes on this assignment. Which is equivalent of 10 hours approx collectively.
 
 ## Description of how I tested the code using the Test Harness
-1. Created a test harness: **test.py**:
+1. **Test Harness Description**: **test.py**:
    - In the main function: I'm using glob to find the '.in' files in 'test' directory and passed them through the custom 'run_test()' for **STDIN** first and then for **ARGS**.
    - I have created a custom results dictionary to store the overall results. The **results** dictonary keeps a count of 4 things and increments the values inside it accordingly for every test:
    - 1. 'OK' : If the test ran successfuly.
